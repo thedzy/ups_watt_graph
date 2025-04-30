@@ -1,14 +1,29 @@
-import itertools
+#!/usr/bin/env python3
+
+__author__ = 'thedzy'
+__copyright__ = 'Copyright 2024, thedzy'
+__license__ = 'GPL'
+__version__ = '3.0'
+__maintainer__ = 'thedzy'
+__email__ = 'thedzy@hotmail.com'
+__status__ = 'Development'
+__date__ = '2025-04-30'
+__description__ = \
+    """
+    ups_live_monitor.py: 
+    Graph up draw over time
+    (Windows Only)
+    """
+
+import time
+from datetime import datetime, timedelta
+from enum import IntEnum
+
 import matplotlib.animation as animation
 import matplotlib.pyplot as plt
 import mplcursors
 import mplcursors
-import pprint
 import pywinusb.hid as hid
-import pywinusb.hid as hid
-import time
-from datetime import datetime, timedelta
-from enum import IntEnum
 
 
 class HidPowerDeviceUsage(IntEnum):
